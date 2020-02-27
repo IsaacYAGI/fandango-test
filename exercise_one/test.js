@@ -19,3 +19,9 @@ it('should return [9,9]', () => {
   let output = calculator.subSetCalculator(input,18);
   output.should.be.eql([9,9]);
 });
+
+it('should return [8,10]', () => {
+  let input = [1, 1, 9, 7, 5, 8, 10];
+  let output = calculator.subSetCalculator(input,18);
+  output.should.be.eql([8,10]);
+});
