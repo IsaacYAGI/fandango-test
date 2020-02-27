@@ -1,0 +1,14 @@
+{
+  "name": "exercise_one",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "IsaacYAGI",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^7.1.0"
+  }
+}
