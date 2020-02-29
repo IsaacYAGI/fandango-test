@@ -5,10 +5,11 @@ const subSetCalculator2 = (arraySource, sum) => { //arraySource: Array input, su
    for (let i = 0, size = arraySource.length; i < size; i++) {
 
         let actualValueArraySource = arraySource[i];
-        if ((sum - actualValueArraySource) in map) {
+        let hashMapSearchingValue = map[sum - actualValueArraySource];
+        if (hashMapSearchingValue !== undefined) {
             result[1] = actualValueArraySource;
             
-            result[0] = arraySource[map[sum - actualValueArraySource]];
+            result[0] = arraySource[hashMapSearchingValue];
             return result;
         }
         
