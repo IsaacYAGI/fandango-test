@@ -4,6 +4,7 @@ const subSetCalculator2 = (arraySource, sum) => { //arraySource: Array input, su
 
    for (let i = 0; i < arraySource.length; i++) {
         
+        //if ((sum - arraySource[i]) in map) {
         if ((sum - arraySource[i]) in map) {
             result[1] = arraySource[i];
             
@@ -12,6 +13,7 @@ const subSetCalculator2 = (arraySource, sum) => { //arraySource: Array input, su
         }
         
         map[arraySource[i]] = i;
+        console.log("Map actual:", map);
     }
     return result;
     
