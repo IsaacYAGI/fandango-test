@@ -2,16 +2,17 @@ const subSetCalculator2 = (arraySource, sum) => { //arraySource: Array input, su
    let result = [];
    let map = {};
 
-   for (let i = 0; i < arraySource.length; i++) {
+   for (let i = 0, size = arraySource.length; i < size; i++) {
 
-        if ((sum - arraySource[i]) in map) {
-            result[1] = arraySource[i];
+        let actualValueArraySource = arraySource[i];
+        if ((sum - actualValueArraySource) in map) {
+            result[1] = actualValueArraySource;
             
-            result[0] = arraySource[map[sum - arraySource[i]]];
+            result[0] = arraySource[map[sum - actualValueArraySource]];
             return result;
         }
         
-        map[arraySource[i]] = i;
+        map[actualValueArraySource] = i;
     }
     return result;
     
