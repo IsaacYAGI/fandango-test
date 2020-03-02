@@ -32,10 +32,10 @@ const subSetCalculator2 = (arraySource, sum) => { //arraySource: Array input, su
 const subSetCalculator = (arraySource, sum) => {
     //Recorremos el arreglo comparando cada uno de los numeros
     // hasta el final
-    for (let i = 0;i<arraySource.length - 1; i++){
-        for (let j = i + 1; j < arraySource.length; j++){
+    for (let i = 0, size = arraySource.length; i < size - 1; i++){
+        for (let j = i + 1, size2 = arraySource.length;  j < size2; j++){
             //Si encuentra el par de numeros que sumados den el numero buscado, se retorna inmediatamente
-            if ((+arraySource[i] + +arraySource[j]) === +sum) return [arraySource[i],arraySource[j]];
+            if ((+arraySource[i] + +arraySource[j]) === +sum) return [arraySource[i], arraySource[j]];
         }
         //Sino se pasa al siguiente valor y se realizan las operaciones de comprobacion
     }
