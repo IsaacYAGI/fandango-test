@@ -39,7 +39,7 @@ const subSetCalculator = (arraySource, sum) => {
         }
         //Sino se pasa al siguiente valor y se realizan las operaciones de comprobacion
     }
-    return [0,0];
+    return [];
 }
 
 
