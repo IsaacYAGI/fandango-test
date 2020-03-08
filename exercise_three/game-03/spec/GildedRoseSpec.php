@@ -120,63 +120,63 @@ describe('Gilded Rose', function () {
         });
 
 
-                context('Sulfuras Items', function () {
+        context('Sulfuras Items', function () {
 
-                    it ('updates Sulfuras items before the sell date', function () {
-                        $item = GildedRose::of('Sulfuras, Hand of Ragnaros', 10, 5);
+            it ('updates Sulfuras items before the sell date', function () {
+                $item = GildedRose::of('Sulfuras, Hand of Ragnaros', 10, 5);
 
-                        $item->tick();
+                $item->tick();
 
-                        expect($item->quality)->toBe(10);
-                        expect($item->sellIn)->toBe(5);
-                    });
+                expect($item->quality)->toBe(10);
+                expect($item->sellIn)->toBe(5);
+            });
 
-                    it ('updates Sulfuras items on the sell date', function () {
-                        $item = GildedRose::of('Sulfuras, Hand of Ragnaros', 10, 0);
+            it ('updates Sulfuras items on the sell date', function () {
+                $item = GildedRose::of('Sulfuras, Hand of Ragnaros', 10, 0);
 
-                        $item->tick();
+                $item->tick();
 
-                        expect($item->quality)->toBe(10);
-                        expect($item->sellIn)->toBe(0);
-                    });
+                expect($item->quality)->toBe(10);
+                expect($item->sellIn)->toBe(0);
+            });
 
-                    it ('updates Sulfuras items after the sell date', function () {
-                        $item = GildedRose::of('Sulfuras, Hand of Ragnaros', 10, -1);
+            it ('updates Sulfuras items after the sell date', function () {
+                $item = GildedRose::of('Sulfuras, Hand of Ragnaros', 10, -1);
 
-                        $item->tick();
+                $item->tick();
 
-                        expect($item->quality)->toBe(10);
-                        expect($item->sellIn)->toBe(-1);
-                    });
+                expect($item->quality)->toBe(10);
+                expect($item->sellIn)->toBe(-1);
+            });
 
-                    it ('Shouldnt update Sulfuras items before the sell date with quality 80', function () {
-                        $item = GildedRose::of('Sulfuras, Hand of Ragnaros', 80, 20);
+            it ('Shouldnt update Sulfuras items before the sell date with quality 80', function () {
+                $item = GildedRose::of('Sulfuras, Hand of Ragnaros', 80, 20);
 
-                        $item->tick();
+                $item->tick();
 
-                        expect($item->quality)->toBe(80);
-                        expect($item->sellIn)->toBe(20);
-                    });
+                expect($item->quality)->toBe(80);
+                expect($item->sellIn)->toBe(20);
+            });
 
-                    it ('Shouldnt update Sulfuras items on the sell date with quality 80', function () {
-                        $item = GildedRose::of('Sulfuras, Hand of Ragnaros', 80, 0);
+            it ('Shouldnt update Sulfuras items on the sell date with quality 80', function () {
+                $item = GildedRose::of('Sulfuras, Hand of Ragnaros', 80, 0);
 
-                        $item->tick();
+                $item->tick();
 
-                        expect($item->quality)->toBe(80);
-                        expect($item->sellIn)->toBe(0);
-                    });
+                expect($item->quality)->toBe(80);
+                expect($item->sellIn)->toBe(0);
+            });
 
-                    it ('Shouldnt update Sulfuras items after the sell date with quality 80', function () {
-                        $item = GildedRose::of('Sulfuras, Hand of Ragnaros', 80, -1);
+            it ('Shouldnt update Sulfuras items after the sell date with quality 80', function () {
+                $item = GildedRose::of('Sulfuras, Hand of Ragnaros', 80, -1);
 
-                        $item->tick();
+                $item->tick();
 
-                        expect($item->quality)->toBe(80);
-                        expect($item->sellIn)->toBe(-1);
-                    });
+                expect($item->quality)->toBe(80);
+                expect($item->sellIn)->toBe(-1);
+            });
 
-                });
+        });
 
 
 
