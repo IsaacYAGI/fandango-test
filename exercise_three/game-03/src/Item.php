@@ -89,14 +89,9 @@ abstract class Item
         //Incrementamos la calidad con factor negativo lo que hará que se reste
         $this->increaseQuality($factor);
 
-        //Obtenemos la nueva calidad
-        $newQuality = $this->getQuality();
-
         //Si la calidad obtenida es menor a 0, se coloca 0
-        if ($newQuality < $this->MIN_QUALITY_ALLOWED){
+        if ($this->getQuality() < $this->MIN_QUALITY_ALLOWED){
             $this->setQuality($this->MIN_QUALITY_ALLOWED);
-        }else{//sino se coloca el valor calculado
-            $this->setQuality($newQuality);
         }
 
     }
