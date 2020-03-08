@@ -51,7 +51,7 @@ describe('Gilded Rose', function () {
 
         });
 
-
+/*
         context('Brie Items', function () {
 
             it ('updates Brie items before the sell date', function () {
@@ -151,7 +151,8 @@ describe('Gilded Rose', function () {
 
         });
 
-
+*/
+/*
         context('Backstage Passes', function () {
             /*
                 "Backstage passes", like aged brie, increases in Quality as it's SellIn
@@ -159,6 +160,7 @@ describe('Gilded Rose', function () {
                 less and by 3 when there are 5 days or less but Quality drops to
                 0 after the concert
              */
+/*
             it ('updates Backstage pass items long before the sell date', function () {
                 $item = GildedRose::of('Backstage passes to a TAFKAL80ETC concert', 10, 11);
 
@@ -245,7 +247,7 @@ describe('Gilded Rose', function () {
 
         });
 
-
+*/
         // context ("Conjured Items", function () {
 
         //     it ('updates Conjured items before the sell date', function () {
