@@ -119,7 +119,7 @@ describe('Gilded Rose', function () {
 
         });
 
-        /*
+
                 context('Sulfuras Items', function () {
 
                     it ('updates Sulfuras items before the sell date', function () {
@@ -151,7 +151,7 @@ describe('Gilded Rose', function () {
 
                 });
 
-        */
+
 /*
         context('Backstage Passes', function () {
             /*
