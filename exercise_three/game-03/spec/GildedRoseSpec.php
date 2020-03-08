@@ -152,7 +152,7 @@ describe('Gilded Rose', function () {
                 });
 
 
-/*
+
         context('Backstage Passes', function () {
             /*
                 "Backstage passes", like aged brie, increases in Quality as it's SellIn
@@ -160,7 +160,7 @@ describe('Gilded Rose', function () {
                 less and by 3 when there are 5 days or less but Quality drops to
                 0 after the concert
              */
-/*
+
             it ('updates Backstage pass items long before the sell date', function () {
                 $item = GildedRose::of('Backstage passes to a TAFKAL80ETC concert', 10, 11);
 
@@ -247,64 +247,64 @@ describe('Gilded Rose', function () {
 
         });
 
-*/
-        // context ("Conjured Items", function () {
 
-        //     it ('updates Conjured items before the sell date', function () {
-        //         $item = GildedRose::of('Conjured Mana Cake', 10, 10);
+         context ("Conjured Items", function () {
 
-        //         $item->tick();
+             it ('updates Conjured items before the sell date', function () {
+                 $item = GildedRose::of('Conjured Mana Cake', 10, 10);
 
-        //         expect($item->quality)->toBe(8);
-        //         expect($item->sellIn)->toBe(9);
-        //     });
+                 $item->tick();
 
-        //     it ('updates Conjured items at zero quality', function () {
-        //         $item = GildedRose::of('Conjured Mana Cake', 0, 10);
+                 expect($item->quality)->toBe(8);
+                 expect($item->sellIn)->toBe(9);
+             });
 
-        //         $item->tick();
+             it ('updates Conjured items at zero quality', function () {
+                 $item = GildedRose::of('Conjured Mana Cake', 0, 10);
 
-        //         expect($item->quality)->toBe(0);
-        //         expect($item->sellIn)->toBe(9);
-        //     });
+                 $item->tick();
 
-        //     it ('updates Conjured items on the sell date', function () {
-        //         $item = GildedRose::of('Conjured Mana Cake', 10, 0);
+                 expect($item->quality)->toBe(0);
+                 expect($item->sellIn)->toBe(9);
+             });
 
-        //         $item->tick();
+             it ('updates Conjured items on the sell date', function () {
+                 $item = GildedRose::of('Conjured Mana Cake', 10, 0);
 
-        //         expect($item->quality)->toBe(6);
-        //         expect($item->sellIn)->toBe(-1);
-        //     });
+                 $item->tick();
 
-        //     it ('updates Conjured items on the sell date at 0 quality', function () {
-        //         $item = GildedRose::of('Conjured Mana Cake', 0, 0);
+                 expect($item->quality)->toBe(6);
+                 expect($item->sellIn)->toBe(-1);
+             });
 
-        //         $item->tick();
+             it ('updates Conjured items on the sell date at 0 quality', function () {
+                 $item = GildedRose::of('Conjured Mana Cake', 0, 0);
 
-        //         expect($item->quality)->toBe(0);
-        //         expect($item->sellIn)->toBe(-1);
-        //     });
+                 $item->tick();
 
-        //     it ('updates Conjured items after the sell date', function () {
-        //         $item = GildedRose::of('Conjured Mana Cake', 10, -10);
+                 expect($item->quality)->toBe(0);
+                 expect($item->sellIn)->toBe(-1);
+             });
 
-        //         $item->tick();
+             it ('updates Conjured items after the sell date', function () {
+                 $item = GildedRose::of('Conjured Mana Cake', 10, -10);
 
-        //         expect($item->quality)->toBe(6);
-        //         expect($item->sellIn)->toBe(-11);
-        //     });
+                 $item->tick();
 
-        //     it ('updates Conjured items after the sell date at zero quality', function () {
-        //         $item = GildedRose::of('Conjured Mana Cake', 0, -10);
+                 expect($item->quality)->toBe(6);
+                 expect($item->sellIn)->toBe(-11);
+             });
 
-        //         $item->tick();
+             it ('updates Conjured items after the sell date at zero quality', function () {
+                 $item = GildedRose::of('Conjured Mana Cake', 0, -10);
 
-        //         expect($item->quality)->toBe(0);
-        //         expect($item->sellIn)->toBe(-11);
-        //     });
+                 $item->tick();
 
-        // });
+                 expect($item->quality)->toBe(0);
+                 expect($item->sellIn)->toBe(-11);
+             });
+
+         });
 
     });
 

@@ -13,7 +13,16 @@ class ConjuredItem extends Item
 {
     public function updateData()
     {
+        //Disminuye dias para comprar
         $this->decreaseSellIn();
-        $this->decreaseQuality(1);
+
+        //Si ya paso la fecha tope para vender
+        if ($this->getSellIn() < 0){
+            //La calidad baja x 4
+            $this->decreaseQuality(4);
+        }else{
+            //Sino baja x 2
+            $this->decreaseQuality(2);
+        }
     }
 }
