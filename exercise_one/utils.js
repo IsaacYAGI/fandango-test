@@ -13,7 +13,7 @@ const subSetCalculator2 = (arraySource, sum) => { //arraySource: Array input, su
         //esta en el hashmap
 
         //De existir, ya tenemos el resultado (el numero actual y el resultado precalculado y almacenado anteriormente)
-        //Devolvemos dicho valor
+        //Devolvemos dichos valores
         if ((sum - actualValueArraySource) in map) {
             result[1] = actualValueArraySource;
             
@@ -21,8 +21,8 @@ const subSetCalculator2 = (arraySource, sum) => { //arraySource: Array input, su
             return result;
         }
         
-        //Si no existiera, ya tenemos ese valor. Almacenamos el valor y el indice
-        //respecto al arreglo enviado para consultarlo posteriormente
+        //Si no existiera, ya tenemos el calculo. Almacenamos como key el resultado de la operacion y el indice
+        //respecto al arreglo enviado para consultarlo posteriormente como valor del arreglo
         map[actualValueArraySource] = i;
     }
     return result;
