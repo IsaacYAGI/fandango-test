@@ -149,6 +149,33 @@ describe('Gilded Rose', function () {
                         expect($item->sellIn)->toBe(-1);
                     });
 
+                    it ('Shouldnt update Sulfuras items before the sell date with quality 80', function () {
+                        $item = GildedRose::of('Sulfuras, Hand of Ragnaros', 80, 20);
+
+                        $item->tick();
+
+                        expect($item->quality)->toBe(80);
+                        expect($item->sellIn)->toBe(20);
+                    });
+
+                    it ('Shouldnt update Sulfuras items on the sell date with quality 80', function () {
+                        $item = GildedRose::of('Sulfuras, Hand of Ragnaros', 80, 0);
+
+                        $item->tick();
+
+                        expect($item->quality)->toBe(80);
+                        expect($item->sellIn)->toBe(0);
+                    });
+
+                    it ('Shouldnt update Sulfuras items after the sell date with quality 80', function () {
+                        $item = GildedRose::of('Sulfuras, Hand of Ragnaros', 80, -1);
+
+                        $item->tick();
+
+                        expect($item->quality)->toBe(80);
+                        expect($item->sellIn)->toBe(-1);
+                    });
+
                 });
 
 
